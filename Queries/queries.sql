@@ -1,0 +1,13 @@
+--Step 01--> Create database user (schema)
+CREATE USER USERDATA IDENTIFIED BY hossein;
+GRANT ALL PRIVILEGES TO USERDATA;
+--Step 02-----------------------------------------------------------------
+CREATE TABLE USER_INFO(
+      id INT GENERATED ALWAYS AS IDENTITY (START WITH 1 INCREMENT BY 1),
+      USER_NAME NVARCHAR2(20),
+      REMAINING_CHARGE_AMOUNT INT
+);
+--Step 03-----------------------------------------------------------------
+INSERT INTO USER_INFO (USER_NAME, REMAINING_CHARGE_AMOUNT) VALUES ('Hossein', 1000);
+INSERT INTO USER_INFO (USER_NAME, REMAINING_CHARGE_AMOUNT) VALUES ('Mahan', 2000);
+INSERT INTO USER_INFO (USER_NAME, REMAINING_CHARGE_AMOUNT) VALUES ('Saeed', 500);

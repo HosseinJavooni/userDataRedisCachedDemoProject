@@ -2,13 +2,13 @@ spring:
   datasource:
 #    url: jdbc:postgresql://localhost:5454/countries_dev
     url: jdbc:oracle:thin:@//localhost:1521/HOSSEINTESTDB
-    username: HR
+    username: USERDATA
     password: hossein
     driver-class-name: oracle.jdbc.driver.OracleDriver
   jpa:
     database-platform: org.hibernate.dialect.OracleDialect
     hibernate:
-      ddl-auto: update
+      ddl-auto: none
     properties:
       hibernate:
         show_sql: false
@@ -20,5 +20,5 @@ spring:
 cache:
   config:
     entryTtl: 60
-    countryNames:
+    userInfo:
       entryTtl: 30
